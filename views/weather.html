@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weatherStyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <title>Weather Page</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>MyWeatherPal Weather Hub</h1>
+        <nav>
+            <img src="./images/websiteLogo.png" class="logo" />
+            <a href="home.html">Home</a>
+            <a href="weather.html">Weather</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+    <div id="warning-message">
+        <p><strong>Warning:</strong> This page contains sounds and animations that may be discomforting for some users.
+            Please adjust your settings accordingly.</p>
+        <div id="sound-settings">
+            <p>Sound: </p>
+
+            <div id="flicker" class="flicker-container flicker-off">
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="search-section">
+            <input title="For better understanding enter a city in the format: city name, country name" type="text"
+                id="inp-text" placeholder="Enter a valid city name here..." />
+            <form>
+                <label for="dateInput">Select a date:</label>
+                <input type="date" id="dateInput">
+            </form>
+            <button class="search-btn"><img src="./images/pictures for weather app/search.png" /></button>
+        </div>
+        <img class="img-src" src="./images/pictures for weather app/clear-day.svg" />
+        <p class="°C">23<sup>o</sup>C</p>
+        <p class="weather-type">Type of weather: </p>
+        <p class="feels-like">Feels like: 24°C</p>
+        <p class="city">New York</p>
+        <div class="info-section-wrap">
+            <div class="humidity-section">
+                <img src="./images/pictures for weather app/humidity.svg" class="humidity-pic pic-form" />
+                <div class="hum-cont">
+                    <p class="hum-percentage" style="margin-bottom: 2px;">45%</p>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="wind-section">
+                <img src="./images/pictures for weather app/wind.svg" class="wind-pic pic-form" />
+                <div class="wind-cont">
+                    <p class="wind-speed" style="margin-bottom: 2px;">45 km/h</p>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1>Charts results of the search</h1>
+
+    <div id="canvas-wrapper">
+    </div>
+
+    <div id="data-wrap">
+        <h2>UV indexes and air quality</h2>
+        <div id="astro-information">
+            <h2>Moon and sun information</h2>
+            <div id="below-wrapper">
+
+                <div id="moon-and-sun">
+
+                    <div id="moon">
+                        <h3>Moon</h3>
+                        <ul id="moon-list">
+                            <li>Illumination: </li>
+                            <li>Moonset time: </li>
+                            <li>Moonrise time: </li>
+                            <li>Moon phase: </li>
+                        </ul>
+                        <div class="pic-container">
+                            <img src="./images/Moon phases/First-quarter.jpg" id="phase" alt="phase of the moon image">
+                        </div>
+                    </div>
+
+                    <div id="sun">
+                        <h3>Sun</h3>
+                        <ul id="sun-list">
+                            <li>Sunset time: </li>
+                            <li>Sunrise time: </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div id="uv-slider">
+            <div class="pointer upper"></div>
+            <div style="margin-top: 30px;" class="pointer"></div>
+        </div>
+
+        <div id="chances">
+            <h2>Chances of rain or snowing</h2>
+
+            <div id="chances-section">
+                <ul id="chances-list">
+                    <li>Will it rain:</li>
+                    <li>Will it snow:</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- TODO: Upgrade homepage and then add sound adjusting settings to the weather page!-->
+    <script type="module" src="weatherScript.js"></script>
+</body>
+
+</html>

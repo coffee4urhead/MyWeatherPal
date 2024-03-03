@@ -1,0 +1,554 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4ead0;
+    color: #604c4c;
+}
+
+p {
+    color: white;
+    font-size: medium;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+form {
+    display: inline-block;
+}
+
+header {
+    background-color: #094664;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+nav a:hover {
+    background-color: #918e8e;
+    color: black;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+header {
+    h1 {
+        color: white;
+        font-size: medium;
+        font-weight: 500;
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+}
+
+canvas.myChart {
+    width: 10px;
+    height: 10px;
+}
+
+/* Search section */
+div.search-section {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+button.search-btn {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input#inp-text {
+    flex: 1;
+    margin-right: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    max-width: 40%;
+}
+
+button.search-btn img {
+    width: 2vw;
+    height: 4vh;
+    object-position: center;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+form {
+    margin-right: 10px;
+}
+
+/* Wrapper */
+.wrapper {
+    margin: 20px auto;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(79, 185, 255));
+    text-align: center;
+    width: 40%;
+    max-width: 40%;
+    height: auto;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 200px));
+    align-items: center;
+    border-radius: 10px;
+    outline-offset: 5px;
+    outline-color: rgb(255, 255, 255);
+    outline-width: 3px;
+    overflow: hidden;
+}
+@media screen and (max-width: 560px) {
+    .wrapper {
+        grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+        height: 60rem;
+    }
+}
+
+img.img-src {
+    width: 7rem;
+    height: 7rem;
+    margin: 20px auto;
+}
+
+/* Input */
+input#dateInput {
+    border-radius: 12px;
+    width: 6rem;
+    height: 3rem;
+}
+
+input#inp-text {
+    width: 80%;
+    height: 40px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 25px;
+}
+
+/* Info Section */
+.info-section-wrap {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    position: relative;
+    bottom: 20px;
+}
+div.hum-cont p {
+    font-size: 25px;
+}
+div.wind-cont p {
+    font-size: 25px;
+}
+.pic-form {
+    width: 7rem;
+    height: 7rem;
+}
+/* Humidity and Wind Sections */
+.humidity-section,
+.wind-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Humidity and Wind Content */
+.hum-cont p,
+.wind-cont p {
+    font-size: 14px;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 90%;
+        padding-bottom: 90%;
+    }
+}
+
+/*Canvas styles here*/
+div#canvas-wrapper {
+    min-height: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    background-color: rgb(219, 198, 91);
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    overflow: auto;
+}
+
+div#canvas-wrapper canvas {
+    max-width: 30rem;
+    max-height: 20rem;
+}
+
+div#uv-slider {
+    margin-top: 20px;
+    height: 5rem;
+    border-radius: 30px;
+    background: linear-gradient(to right,
+            #008000,
+            /* green */
+            #7FFF00,
+            /* light green */
+            #FFFF00,
+            /* yellow */
+            #FFD700,
+            /* orangy-like yellow */
+            #FFA500,
+            /* orange */
+            #e37718,
+            /* light orange */
+            #FF0000,
+            /* red */
+            #B22222,
+            /* more redder red */
+            #e36177,
+            /* pink */
+            #f74560
+            /* light pink */
+        );
+    border: 5px solid grey;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+div.pointer {
+    width: 5px;
+    height: 5px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid #f00;
+    position: relative;
+    left: 0px;
+}
+
+div.upper {
+    margin-top: -2px;
+    transform: rotate(180deg);
+}
+
+div#data-wrap {
+    margin-top: 20px;
+    height: auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    background-color: #F9F8F6;
+    border-radius: 12px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: rgb(244, 226, 191);
+}
+
+div#astro-information {
+    margin-top: 20px;
+    height: auto;
+    background-color: #F5D28E;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+div#moon-and-sun {
+    max-width: 600px;
+    height: auto;
+    border-radius: 20px;
+    background-color: #B1E6B3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Common Styles */
+#moon,
+#sun {
+    text-align: left;
+}
+
+.pic-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+div.pic-container {
+    width: 70%;
+    height: 70%;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+div#chances {
+    margin-top: 20px;
+    height: 12rem;
+    background-color: #f7da46;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+div#chances-section {
+    height: 6rem;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    background-color: #ede771;
+}
+
+/* To here */
+
+@keyframes snowing {
+    0% {
+        transform: translateX(-1px);
+    }
+
+    50% {
+        transform: translateX(1px);
+    }
+
+    100% {
+        transform: translateX(-1px);
+    }
+}
+
+.snowing {
+    animation: snowing 0.2s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.clear-day {
+    animation: gentleFloat 5s ease-in-out infinite;
+}
+
+@keyframes rainy {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.rainy {
+    animation: rainy 2s ease-in-out infinite;
+}
+
+@keyframes cloudy {
+    0% {
+        transform: translateX(-0.5%);
+    }
+
+    50% {
+        transform: translateX(0.5%);
+    }
+
+    100% {
+        transform: translateX(-0.5%);
+    }
+}
+
+.cloudy {
+    animation: cloudy 10s ease-in-out infinite alternate;
+}
+
+@keyframes misty {
+    0% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
+
+.misty {
+    animation: misty 5s ease-in-out infinite alternate;
+}
+
+@keyframes drizzle {
+    0% {
+        opacity: 0.9;
+        transform: translateY(-5px);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: translateY(5px);
+    }
+
+    100% {
+        opacity: 0.9;
+        transform: translateY(10px);
+    }
+}
+
+.drizzle {
+    animation: drizzle 10s linear infinite;
+}
+
+.message {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transform: translateZ(20px);
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .message {
+        max-width: 90%;
+    }
+}
+
+#warning-message {
+    background-color: #ffcccc;
+    color: #990000;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.flicker-container {
+    width: 60px;
+    height: 30px;
+    border-radius: 12px;
+    position: relative;
+    background-color: black;
+    margin-top: 0;
+}
+
+div#sound-settings {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes flicker-on {
+    0% {
+        left: 15px;
+    }
+
+    100% {
+        left: 45px;
+    }
+}
+
+@keyframes flicker-off {
+    0% {
+        left: 45px;
+    }
+
+    100% {
+        left: 15px;
+    }
+}
+
+.flicker-on .dot {
+    animation: flicker-on 1s forwards;
+}
+
+.flicker-off .dot {
+    animation: flicker-off 1s forwards;
+}
+
+.flicker-on {
+    background-color: rgb(127, 181, 182);
+    transition: 0.5s background-color;
+}
+.flicker-on .dot {
+    background-color: #094664;
+    transition: 1s background-color;
+}
+
+.flicker-off {
+    background-color: #094664;
+    transition: 0.5s background-color;
+}
+.flicker-off .dot {
+    background-color: rgb(127, 181, 182);
+    transition: 1s background-color;
+}

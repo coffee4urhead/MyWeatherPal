@@ -1,0 +1,317 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #efefef;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    background-color: #094664;
+    display: grid;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+nav a:hover {
+    background-color: #918e8e;
+    color: black;
+}
+
+nav>p {
+    color: white;
+    font-size: 22px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+header video {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.head-info {
+    border-radius: 12px;
+    color: white;
+    font-size: medium;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    max-width: 400px;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+div a {
+    text-decoration: none;
+}
+
+/* ============================ */
+
+/*Main section*/
+main.main-cards-cont {
+    background-color: #92a8b3;
+    margin-top: 30px;
+    gap: 10px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    height: auto;
+}
+
+div.card {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 12px;
+    background-color: #094664;
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-box {
+    flex-grow: 1;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.button {
+    background-color: #f47c3c;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.button>a {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.button:hover {
+    background-color: #b35043;
+}
+
+div.cont-box {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    position: relative;
+    inset: 11px 11px 11px 11px;
+}
+
+div.card>h1 {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* ============================ */
+/*Subsection here*/
+.service-descr {
+    background-color: #094664;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 12px;
+}
+
+div.wrap-section {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+        height: auto;
+    background-color: rgb(79, 185, 255);
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    width: calc(55% - 20px);
+    flex-shrink: 0;
+}
+
+div.wrap-section p {
+    padding: 20px;
+    color: white;
+    background-color: rgb(79, 185, 255);
+}
+
+div.wrap-section>h2 {
+    color: white;
+}
+
+div.city-gallery {
+    width: calc(45% - 20px);
+    height: auto;
+    background-color: #deecaa;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+div.city-gallery img {
+    width: 170px;
+    height: 180px;
+}
+
+@media (max-width: 768px) {
+    div.wrap-section,
+    div.city-gallery {
+        width: 100%;
+    }
+}
+/*Project info incorporated (Final page row)*/
+footer#inc-info {
+    height: auto;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+div.project-info {
+    margin-top: 20px;
+    background-color: #00abff;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    font-size: 19px;
+    border-radius: 12px;
+    margin: 10px 10px 10px 10px;
+}
+
+div.list-key {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    border-radius: 12px;
+    background-color: #89d1f5;
+}
+
+div.project-info p {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    padding: 5px;
+}
+
+.hidden-rotator {
+    opacity: 0.1;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: rotate(5deg);
+}
+
+.show-rotator {
+    opacity: 1;
+    transform: rotate(0deg);
+    filter: blur(0);
+}
+
+#warning-message {
+    background-color: #ffcccc;
+    color: #990000;
+    padding: 10px 20px;
+    text-align: center;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    padding: 5px;
+}
+
+.message {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transform: translateZ(20px);
+    max-width: 80%;
+    margin: 20px auto;
+}
