@@ -10,7 +10,7 @@
     "weather forecasting",
     "weather tracking"
   ],
-  "author": "Mihail Mihaylov",
+  "author": "Mihail Mihaylov & Viktor Korcanov",
   "license": "ISC",
   "dependencies": {
     "cross-fetch": "^4.0.0",
