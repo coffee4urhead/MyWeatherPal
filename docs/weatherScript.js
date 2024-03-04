@@ -118,8 +118,9 @@ async function updateInfo(city = null, selectedDate = new Date().toISOString().s
     }
   }
 
-  let response = await fetch(`/apiResp/${city}/${selectedDate}`);
-  let responseData = await response.json();
+  const apiKey = process.env.API_KEY;
+  const secondWeatherResponse = await fetch(`https://api.weatherapi.com/v1/history.json?key=${apiKey}&q=${city}&dt=${selectedDate}`);
+  const responseData = await secondWeatherResponse.json();
 
   console.log(responseData);
 
@@ -490,7 +491,7 @@ async function addUVIndexInfo(responseData) {
   const upperPointer = document.querySelector('.upper');
 
   upperPointer.style.transform = "rotate(180deg)";
-  
+
   pointerObj.forEach(obj => {
     switch (uvIndex) {
       case 1:
