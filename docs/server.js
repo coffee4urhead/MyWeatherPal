@@ -1,5 +1,6 @@
 // server.js
 const dotenv = require('dotenv');
+const path = require('path');
 dotenv.config();
 
 const fetch = require('cross-fetch');
@@ -9,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(express.static('/'));
+app.use(express.static(path.join(__dirname)));
 
 app.get('/apiResp/:city/:date', async (req, res) => {
     try {
