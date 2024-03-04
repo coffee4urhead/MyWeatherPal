@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(express.static('docs'));
+app.use(express.static('/'));
 
 app.get('/apiResp/:city/:date', async (req, res) => {
     try {
