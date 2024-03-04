@@ -34,18 +34,18 @@ if (prefersReducedMotion) {
   const settingsLink = document.createElement('a');
   settingsLink.textContent = "Go to Accessibility Settings";
   settingsLink.href = "https://scholar.harvard.edu/ccwilcox/blog/how-reduce-motion-various-operating-systems";
-  
+
   const message = document.createElement('div');
   message.classList.add("message")
   message.textContent = "It seems like you prefer reduced motion. You can adjust this setting in your device's accessibility settings.";
   message.appendChild(settingsLink);
-  
+
   const secondChild = document.body.children[0];
   document.body.insertBefore(message, secondChild.nextSibling);
 }
 
 const flickerElement = document.getElementById('flicker');
-flickerElement.addEventListener('click', function() {
+flickerElement.addEventListener('click', function () {
   toggleFlicker(audio)
 });
 
@@ -94,7 +94,12 @@ myInputSearchButton.addEventListener('click', () => {
   updateInfo(cityEntered, selectedDate, isPreferedReduced, flickerElement);
 })
 
-async function updateInfo(city = null, selectedDate = new Date().toISOString().split("T")[0], areAnimationsAllowed = false, flickerElement) {
+async function updateInfo(city = null, selectedDate = new Date().toISOString().split("T")[0], areAnimationsAllowed = false) {
+
+  if (audio) {
+    audio.src = null
+    audio.load();
+  }
 
   if (!areAnimationsAllowed && animationName) {
     removeAnimationFromAllElements(animationName);
@@ -294,8 +299,10 @@ async function updateInfo(city = null, selectedDate = new Date().toISOString().s
     addAnimationToAllElements(animationName);
   }
 
-    audio = new Audio(audioToPlay);
-    audio.loop = true;
+  audio = new Audio();
+  audio.src = audioToPlay;
+  audio.load();
+  audio.loop = true;
 }
 
 
@@ -480,7 +487,10 @@ async function createChart(barChartData, objDataForTemps, objWindData) {
 async function addUVIndexInfo(responseData) {
   let uvIndex = responseData.forecast.forecastday[0].day.uv;
   const pointerObj = Array.from(document.querySelectorAll('.pointer'));
+  const upperPointer = document.querySelector('.upper');
 
+  upperPointer.style.transform = "rotate(180deg)";
+  
   pointerObj.forEach(obj => {
     switch (uvIndex) {
       case 1:
@@ -514,6 +524,7 @@ async function addUVIndexInfo(responseData) {
         obj.style.left = '250px';
         break;
     }
+    obj.style.transform = "rotate(180deg)";
   })
 
   let uvSlider = document.getElementById('uv-slider');
@@ -612,19 +623,19 @@ function updateChancesInformation(chancesData) {
 }
 function toggleFlicker(audioExp = null) {
   if (flickerElement.classList.contains('flicker-on')) {
-      flickerElement.classList.remove('flicker-on');
-      flickerElement.classList.add('flicker-off');
-      
-      if (audioExp !== null) {
-          audioExp.pause();
-      }
+    flickerElement.classList.remove('flicker-on');
+    flickerElement.classList.add('flicker-off');
+
+    if (audioExp !== null) {
+      audioExp.pause();
+    }
   } else {
-      flickerElement.classList.remove('flicker-off');
-      flickerElement.classList.add('flicker-on');
-      
-      if (audioExp !== null) {
-          audioExp.play();
-      }
+    flickerElement.classList.remove('flicker-off');
+    flickerElement.classList.add('flicker-on');
+
+    if (audioExp !== null) {
+      audioExp.play();
+    }
   }
 }
 

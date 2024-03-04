@@ -16,6 +16,7 @@ p {
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
+    margin-top: -6px;
 }
 
 form {
@@ -82,7 +83,7 @@ canvas.myChart {
 
 /* Search section */
 div.search-section {
-    margin-top: 12px;
+    margin-top: 70px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -117,14 +118,18 @@ form {
     margin-right: 10px;
 }
 
+main#main-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
 /* Wrapper */
 .wrapper {
-    margin: 20px auto;
+    margin: 20px;
     background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(79, 185, 255));
     text-align: center;
-    width: 40%;
-    max-width: 40%;
-    height: auto;
+    height: 50rem;
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(100px, 200px));
     align-items: center;
@@ -133,18 +138,26 @@ form {
     outline-color: rgb(255, 255, 255);
     outline-width: 3px;
     overflow: hidden;
+    gap: 10px;
 }
+
 @media screen and (max-width: 560px) {
-    .wrapper {
-        grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
-        height: 60rem;
+    div.search-section {
+        margin-top: 70px;
+    }
+    img.img-src {
+        margin-bottom: 20px;
     }
 }
 
 img.img-src {
-    width: 7rem;
     height: 7rem;
-    margin: 20px auto;
+    position: relative;
+    top: 60px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
 }
 
 /* Input */
@@ -174,16 +187,20 @@ p {
     position: relative;
     bottom: 20px;
 }
+
 div.hum-cont p {
     font-size: 25px;
 }
+
 div.wind-cont p {
     font-size: 25px;
 }
+
 .pic-form {
     width: 7rem;
     height: 7rem;
 }
+
 /* Humidity and Wind Sections */
 .humidity-section,
 .wind-section {
@@ -201,15 +218,8 @@ div.wind-cont p {
     margin: 0;
 }
 
-@media screen and (max-width: 768px) {
-    .wrapper {
-        width: 90%;
-        padding-bottom: 90%;
-    }
-}
-
 /*Canvas styles here*/
-div#canvas-wrapper {
+article#canvas-wrapper {
     min-height: auto;
     height: auto;
     display: grid;
@@ -225,35 +235,47 @@ div#canvas-wrapper canvas {
     max-height: 20rem;
 }
 
-div#uv-slider {
+section#uv-slider {
     margin-top: 20px;
     height: 5rem;
     border-radius: 30px;
     background: linear-gradient(to right,
-            #008000,
-            /* green */
-            #7FFF00,
-            /* light green */
-            #FFFF00,
-            /* yellow */
-            #FFD700,
-            /* orangy-like yellow */
-            #FFA500,
-            /* orange */
-            #e37718,
-            /* light orange */
-            #FF0000,
-            /* red */
-            #B22222,
-            /* more redder red */
-            #e36177,
-            /* pink */
-            #f74560
-            /* light pink */
-        );
+    #008000,
+    /* green */
+    #7FFF00,
+    /* light green */
+    #FFFF00,
+    /* yellow */
+    #FFD700,
+    /* orangy-like yellow */
+    #FFA500,
+    /* orange */
+    #e37718,
+    /* light orange */
+    #FF0000,
+    /* red */
+    #B22222,
+    /* more redder red */
+    #e36177,
+    /* pink */
+    #f74560
+    /* light pink */
+    );
     border: 5px solid grey;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+}
 
+section#uv-slider p {
+    color: darkblue;
+    font-size: medium;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 div.pointer {
@@ -271,20 +293,19 @@ div.upper {
     transform: rotate(180deg);
 }
 
-div#data-wrap {
+section#data-wrap {
     margin-top: 20px;
     height: auto;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    background-color: #F9F8F6;
     border-radius: 12px;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
     padding: 20px;
     background-color: rgb(244, 226, 191);
 }
 
-div#astro-information {
+section#astro-information {
     margin-top: 20px;
     height: auto;
     background-color: #F5D28E;
@@ -294,7 +315,7 @@ div#astro-information {
     padding: 20px;
 }
 
-div#moon-and-sun {
+section#moon-and-sun {
     max-width: 600px;
     height: auto;
     border-radius: 20px;
@@ -305,6 +326,30 @@ div#moon-and-sun {
     gap: 20px;
     padding: 20px;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+ul#moon-list li {
+    color: darkgreen;
+    font-size: medium;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+ul#sun-list li {
+    color: darkgreen;
+    font-size: medium;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 /* Common Styles */
@@ -326,7 +371,7 @@ div.pic-container {
     overflow: hidden;
 }
 
-div#chances {
+section#chances {
     margin-top: 20px;
     height: 12rem;
     background-color: #f7da46;
@@ -340,6 +385,15 @@ div#chances-section {
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     background-color: #ede771;
+    color: darkblue;
+    font-size: medium;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 /* To here */
@@ -473,12 +527,15 @@ div#chances-section {
 }
 
 #warning-message {
-    background-color: #ffcccc;
-    color: #990000;
+    background-color: #d23535;
     padding: 10px 20px;
     text-align: center;
     font-size: 16px;
     font-weight: bold;
+}
+
+#warning-message p {
+    color: white;
 }
 
 .flicker-container {
@@ -539,6 +596,7 @@ div#sound-settings {
     background-color: rgb(127, 181, 182);
     transition: 0.5s background-color;
 }
+
 .flicker-on .dot {
     background-color: #094664;
     transition: 1s background-color;
@@ -548,6 +606,7 @@ div#sound-settings {
     background-color: #094664;
     transition: 0.5s background-color;
 }
+
 .flicker-off .dot {
     background-color: rgb(127, 181, 182);
     transition: 1s background-color;
