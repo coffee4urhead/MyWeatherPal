@@ -291,10 +291,11 @@ div.project-info p {
 }
 
 #warning-message {
-    background-color: #ffcccc;
-    color: #990000;
+    background-color: #d23535;
     padding: 10px 20px;
     text-align: center;
+    font-size: 16px;
+    font-weight: bold;
     color: white;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;

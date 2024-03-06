@@ -117,8 +117,8 @@ async function updateInfo(city = null, selectedDate = new Date().toISOString().s
       return;
     }
   }
-
-  let response = await fetch(`/apiResp/${city}/${selectedDate}`);
+        
+  let response = await fetch(`https://api.weatherapi.com/v1/history.json?key=e6c7b92e1d804267ab4164943231812&q=${city}&dt=${selectedDate}`);
   let responseData = await response.json();
 
   console.log(responseData);
