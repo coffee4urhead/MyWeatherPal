@@ -252,7 +252,7 @@ div.project-info {
     font-weight: 700;
     font-style: normal;
     font-variation-settings:
-        "wdth" 100;
+    "wdth" 100;
     font-size: 19px;
     border-radius: 12px;
     margin: 10px 10px 10px 10px;
@@ -273,7 +273,7 @@ div.project-info p {
     font-weight: 700;
     font-style: normal;
     font-variation-settings:
-        "wdth" 100;
+    "wdth" 100;
     padding: 5px;
 }
 
@@ -290,8 +290,9 @@ div.project-info p {
     filter: blur(0);
 }
 
-div#warning-message {
+#warning-message {
     background-color: #d23535;
+    color: white;
     padding: 10px 20px;
     text-align: center;
     font-size: 16px;
@@ -303,9 +304,7 @@ div#warning-message {
     font-variation-settings:
         "wdth" 100;
 }
-div#warning-message p {
-    color: white;
-}
+
 .message {
     background-color: #f0f0f0;
     color: #333;

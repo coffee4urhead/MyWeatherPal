@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <script id="oada_ma_toolbar_script">var oada_ma_license_key="mPkasVdK1ZBBFiaffZRwLstev7vXP617vWFg15TGJW4XadEM0G";var oada_ma_license_url="https://api.maxaccess.io/scripts/toolbar/mPkasVdK1ZBBFiaffZRwLstev7vXP617vWFg15TGJW4XadEM0G";(function(s,o,g){a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.src=g;a.setAttribute("async","");a.setAttribute("type","text/javascript");a.setAttribute("crossorigin","anonymous");m.parentNode.insertBefore(a,m)})(document,"script",oada_ma_license_url+oada_ma_license_key);</script>
+    <script src="https://cdn.userway.org/widget.js" data-account="J1715pPOzD"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="indexStyles.css" />
@@ -13,89 +13,97 @@
 </head>
 
 <body>
-    <nav>
-        <img src="./images/websiteLogo.png" class="logo" />
-        <a href="./index.html" id="weather">Home</a>
-        <a href="./about.html" id="about">About</a>
-        <a href="./weather.html" id="weather">Weather Page</a>
+    <nav tabindex="1">
+        <img src="./images/websiteLogo.png" class="logo"
+            alt="website logo that is on white background where the text MyWeatherPal is visible on the bottom of crossed arrows that have all weather types in each crossing section" />
+        <a href="./home.html" id="weather" tabindex="1">Home</a>
+        <a href="./about.html" id="about" tabindex="1">About</a>
+        <a href="./weather.html" id="weather" tabindex="1">Weather Page</a>
     </nav>
 
-    <div id="warning-message">
-        <p><strong><em>Warning:</em></strong> This page animations that may be discomforting for some
+    <div id="warning-message" tabindex="2" aria-label="Warning Message">
+        <p tabindex="2"><strong><em>Warning:</em></strong> This page contains animations that may be discomforting for
+            some
             users.
             Please adjust your settings accordingly.</p>
     </div>
-    <header>
+    <header tabindex="3" aria-label="Header Section">
         <video autoplay loop muted>
             <source src="./videos/nature.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="head-info first-cart">
-            <h2>Welcome to our weather app</h2>
-            <p>Step into the world of weather with our intuitive and feature-rich application. Whether you're planning
+        <div class="head-info first-cart" tabindex="3">
+            <h2 tabindex="3">Welcome to our weather hub</h2>
+            <p tabindex="3">Step into the world of weather with our intuitive and feature-rich application. Whether
+                you're planning
                 your next adventure or simply want to stay informed about the forecast in your area, our app provides
                 accurate and up-to-date weather information at your fingertips.</p>
         </div>
 
-        <div class="head-info second-cart">
-            <h2>Welcome to our weather app</h2>
-            <p>Experience the convenience of accessing reliable weather forecasts anytime, anywhere. Our weather app
+        <div class="head-info second-cart" tabindex="3">
+            <h2 tabindex="3">Welcome to our rich with accessibilites website</h2>
+            <p tabindex="3">Experience the convenience of accessing reliable weather forecasts anytime, anywhere. Our
+                weather app
                 offers a user-friendly interface and comprehensive data to help you plan your day with confidence. From
                 temperature and precipitation to wind speed and atmospheric pressure, we've got you covered.</p>
         </div>
 
-        <div class="head-info third-cart">
-            <h2>Welcome to our weather app</h2>
-            <p>Join our community of weather enthusiasts and embark on a journey of meteorological discovery. With our
+        <div class="head-info third-cart" tabindex="3">
+            <h2 tabindex="3">Welcome to our meteorology enthusiasts station</h2>
+            <p tabindex="3">Join our community of weather enthusiasts and embark on a journey of meteorological
+                discovery. With our
                 weather app, you'll gain insights into weather patterns, learn about climate trends, and stay informed
                 about severe weather alerts. Start exploring today and make every day a perfect weather day!</p>
         </div>
     </header>
 
 
-    <main class="main-cards-cont">
-        <div class="card hidden-rotator">
-            <h1>Welcome to MyWeatherPal</h1>
-            <div class="cont-box">
-                <p>MyWeatherPal is your ultimate destination for accurate and reliable weather forecasts. Whether
+    <main class="main-cards-cont" tabindex="4" aria-label="Main Content">
+        <div class="card hidden-rotator" tabindex="4">
+            <h1 tabindex="4">Welcome to MyWeatherPal</h1>
+            <div class="cont-box" tabindex="4">
+                <p tabindex="4">MyWeatherPal is your ultimate destination for accurate and reliable weather forecasts.
+                    Whether
                     you're planning outdoor activities, traveling to new destinations, or simply staying informed
                     about the weather in your area, we've got you covered.</p>
             </div>
-            <div class="buttons">
-                <button class="button"><a href="./weather.html">Get Started</a></button>
+            <div class="buttons" tabindex="4" aria-label="Button for direct access to the current weather forecast">
+                <button class="button" tabindex="4"><a href="./weather.html" tabindex="4">Get Started</a></button>
             </div>
         </div>
-        <div class="card hidden-rotator">
-            <h1>Discover Weather Insights</h1>
-            <div class="cont-box">
-                <p>Explore detailed weather insights and forecasts tailored to your preferences with MyWeatherPal. Our
+        <div class="card hidden-rotator" tabindex="4">
+            <h1 tabindex="4">Discover Weather Insights</h1>
+            <div tabindex="4" class="cont-box">
+                <p tabindex="4">Explore detailed weather insights and forecasts tailored to your preferences with
+                    MyWeatherPal. Our
                     platform offers a wealth of information, covering everything from current conditions to hourly and
                     long-term forecasts. You can access MyWeatherPal anywhere and anytime.
                 </p>
             </div>
-            <div class="buttons">
-                <button class="button"><a href="./weather.html">Explore Forecasts</a></button>
+            <div class="buttons" tabindex="4" aria-label="Button for direct access to the current weather forecast">
+                <button class="button" tabindex="4"><a href="./weather.html" tabindex="4">Explore Forecasts</a></button>
             </div>
         </div>
-        <div class="card hidden-rotator">
-            <h1>Stay always Connected</h1>
-            <div class="cont-box">
-                <p>Access MyWeatherPal from any device, whether you're at home, at work, or on the go. Our
+        <div class="card hidden-rotator" tabindex="4">
+            <h1 tabindex="4">Stay always Connected</h1>
+            <div class="cont-box" tabindex="4">
+                <p tabindex="4">Access MyWeatherPal from any device, whether you're at home, at work, or on the go. Our
                     mobile-friendly platform ensures that you can stay connected to the latest weather updates, ensuring
                     your safe and fast access to crucial weather forecasts.
                 </p>
             </div>
-            <div class="buttons">
-                <button class="button"><a href="./weather.html">Download Now</a></button>
+            <div class="buttons" tabindex="4" aria-label="Button for downloading the MyWeatherPal desktop application">
+                <button class="button" tabindex="4"><a href="./weather.html" tabindex="4">Download Now</a></button>
             </div>
         </div>
     </main>
 
 
-    <section class="service-descr">
-        <div class="wrap-section">
-            <h2>Our Team and Services</h2>
-            <p>At MyWeatherPal, we take pride in our dedicated team and the comprehensive range of services we
+    <section class="service-descr" tabindex="5" aria-label="Service Description">
+        <div class="wrap-section" tabindex="5">
+            <h2 tabindex="5">Our Team and Services</h2>
+            <p tabindex="5">At MyWeatherPal, we take pride in our dedicated team and the comprehensive range of services
+                we
                 provide. Our team of experienced meteorologists, developers, and designers work tirelessly to
                 deliver accurate weather forecasts and innovative features to our users.
                 Whether you're looking for up-to-the-minute weather updates, detailed forecasts, or specialized
@@ -106,37 +114,41 @@
                 reliable, and informative for everyone.
             </p>
         </div>
-        <div class="city-gallery">
-            <img src="./images/pictures for weather app/clear-day.svg" alt="clear day image" class="hidden-rotator" />
-            <img src="./images/pictures for weather app/rain.svg" alt="raining icon" class="hidden-rotator" />
-            <img src="./images/pictures for weather app/snow.svg" alt="snowing icon" class="hidden-rotator" />
+        <div class="city-gallery" tabindex="5"
+            aria-label="Picture Section showcasing the different weather types as an animation ">
+            <img src="./images/pictures for weather app/clear-day.svg" tabindex="5"
+                alt="animated and continuously spinning sun " class="hidden-rotator" />
+            <img src="./images/pictures for weather app/rain.svg" tabindex="5"
+                alt="animated clouds filled with rain with a continuous rainfalling animation" class="hidden-rotator" />
+            <img src="./images/pictures for weather app/snow.svg" tabindex="5"
+                alt="animated clouds filled with snowflakes showcasing cold weather with continuous snowfall animation"
+                class="hidden-rotator" />
         </div>
     </section>
 
-
-    <footer id="inc-info" class="service-descr">
-        <div class="project-info hidden-rotator">
-            <p>
-                Welcome to WeatherHub, your go-to destination for accurate and up-to-date weather information. Our
+    <footer id="inc-info" class="service-descr" tabindex="7" aria-label="Footer Section">
+        <div class="project-info hidden-rotator" tabindex="7" aria-label="Website Information Section">
+            <p tabindex="7">
+                Welcome to MyWeatherPal, your go-to destination for accurate and up-to-date weather information. Our
                 project is dedicated to providing a comprehensive and user-friendly platform that caters to all your
                 weather needs. Whether you're planning your day, a week ahead, or simply curious about the current
-                conditions, WeatherHub has you covered.
+                conditions, MyWeatherPal has you covered.
             </p>
-            <div class="list-key">
-                <ul>
-                    <li>Real-time Weather Updates</li>
-                    <li>Personalized Forecasts</li>
-                    <li>Interactive Maps</li>
-                    <li>Historical Weather Data</li>
-                    <li>Weather News and Insights</li>
-                    <li>Responsive Design</li>
+            <div class="list-key" tabindex="7" aria-label="Wesbite Functionality Listings">
+                <ul tabindex="7">
+                    <li tabindex="7">Real-time Weather Updates</li>
+                    <li tabindex="7">Personalized Forecasts</li>
+                    <li tabindex="7">Interactive Maps</li>
+                    <li tabindex="7">Historical Weather Data</li>
+                    <li tabindex="7">Weather News and Insights</li>
+                    <li tabindex="7">Responsive Design</li>
                 </ul>
             </div>
         </div>
-        <div class="project-info hidden-rotator resize">
-            <section>
-                <h2>Mihail: The Visionary Coder</h2>
-                <p>
+        <div class="project-info hidden-rotator resize" tabindex="8">
+            <section tabindex="8" aria-label="Information About The Creators">
+                <h2 tabindex="8">Mihail: The Visionary Coder</h2>
+                <p tabindex="8">
                     Passion: Mihail's heart beats in code. From tinkering with algorithms to mastering new
                     programming
                     languages, Mihail's passion for coding knows no bounds. With a sharp eye for detail and a knack
@@ -146,10 +158,10 @@
                 </p>
             </section>
         </div>
-        <div class="project-info hidden-rotator resize">
-            <section>
-                <h2>Viktor: The Tech Explorer</h2>
-                <p>
+        <div class="project-info hidden-rotator resize" tabindex="9">
+            <section tabindex="9" aria-label="Information About The Creators">
+                <h2 tabindex="9">Viktor: The Tech Explorer</h2>
+                <p tabindex="9">
                     Explorer Spirit: Viktor is not just a coder; Viktor is an explorer of the digital realm. From
                     delving into the intricacies of cybersecurity to experimenting with cutting-edge technologies,
                     Viktor's enthusiasm for IT extends beyond traditional programming. Viktor envisions a future
@@ -167,8 +179,14 @@
             #094664 dark blue col
             <>
         -->
+        <!--
+            Implement the news search by:
+            Keyword or phrase. Eg: find all articles containing the word 'Microsoft'.
+            Date published. Eg: find all articles published yesterday.
+            Source domain name. Eg: find all articles published on thenextweb.com.
+            Language. Eg: find all articles written in English.
+        -->
     </footer>
-
     <script src="script.js"></script>
 </body>
 

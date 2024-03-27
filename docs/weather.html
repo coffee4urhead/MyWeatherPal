@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <script id="oada_ma_toolbar_script">var oada_ma_license_key="mPkasVdK1ZBBFiaffZRwLstev7vXP617vWFg15TGJW4XadEM0G";var oada_ma_license_url="https://api.maxaccess.io/scripts/toolbar/mPkasVdK1ZBBFiaffZRwLstev7vXP617vWFg15TGJW4XadEM0G";(function(s,o,g){a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.src=g;a.setAttribute("async","");a.setAttribute("type","text/javascript");a.setAttribute("crossorigin","anonymous");m.parentNode.insertBefore(a,m)})(document,"script",oada_ma_license_url+oada_ma_license_key);</script>
+    <script src="https://cdn.userway.org/widget.js" data-account="J1715pPOzD"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="weatherStyles.css" />
@@ -14,122 +14,139 @@
 
 <body>
 
-    <header>
-        <h1>MyWeatherPal Weather Hub</h1>
-        <nav>
-            <img src="./images/websiteLogo.png" class="logo" />
-            <a href="index.html">Home</a>
-            <a href="weather.html">Weather</a>
-            <a href="about.html">About</a>
+    <header tabindex="1"
+        aria-label="The head section of the main functionality of the page containing the link navigations to the other pages">
+        <h1 tabindex="1">MyWeatherPal Weather Hub</h1>
+        <nav tabindex="1">
+            <img src="./images/websiteLogo.png" tabindex="1" class="logo"
+                alt="website logo that is on white background where the text MyWeatherPal is visible on the bottom of crossed arrows that have all weather types in each crossing section" />
+            <a href="index.html" tabindex="1">Home</a>
+            <a href="weather.html" tabindex="1">Weather</a>
+            <a href="about.html" tabindex="1">About</a>
         </nav>
     </header>
-    <div id="warning-message">
-        <p><strong>Warning:</strong> This page contains sounds and animations that may be discomforting for some users.
+    <div id="warning-message" tabindex="2"
+        aria-label="The section where each individual visitor of the page can modify the behavior of the sounds and animations">
+        <p tabindex="2"><strong>Warning:</strong> This page contains sounds and animations that may be discomforting for
+            some users.
             Please adjust your settings accordingly.</p>
-        <div id="sound-settings">
-            <p>Sound: </p>
+        <div id="sound-settings" tabindex="2">
+            <p tabindex="2">Sound: </p>
 
-            <div id="flicker" class="flicker-container flicker-off">
-                <div class="dot"></div>
+            <div id="flicker" class="flicker-container flicker-off" tabindex="2"
+                aria-label="Control for adjusting the sound level accordingly">
+                <div class="dot" tabindex="2"></div>
             </div>
         </div>
     </div>
 
     <main id="main-cont">
 
-        <div class="wrapper">
+        <div class="wrapper" tabindex="3">
             <div class="search-section">
                 <input title="For better understanding enter a city in the format: city name, country name" type="text"
-                    id="inp-text" placeholder="Enter a valid city name here..." />
-                <form>
-                    <label for="dateInput">Select a date:</label>
-                    <input type="date" id="dateInput">
+                    id="inp-text" tabindex="4" placeholder="Enter a valid city name here..." />
+                <form tabindex="4">
+                    <label tabindex="4" for="dateInput">Select a date:</label>
+                    <input tabindex="4" type="date" id="dateInput">
                 </form>
-                <button class="search-btn"><img src="./images/pictures for weather app/search.png" /></button>
+                <button tabindex="4" class="search-btn"
+                    aria-label="Submit city and country information for processing"><img
+                        src="./images/pictures for weather app/search.png"
+                        alt="image that displays a simple search icon" /></button>
             </div>
-            <img class="img-src" src="./images/pictures for weather app/clear-day.svg" />
-            <p class="°C">23<sup>o</sup>C</p>
-            <p class="weather-type">Type of weather: </p>
-            <p class="feels-like">Feels like: 24°C</p>
-            <p class="city">New York</p>
+            <img tabindex="5" class="img-src" src="./images/pictures for weather app/clear-day.svg" />
+            <p tabindex="5" class="°C">23<sup>o</sup>C</p>
+            <p tabindex="5" class="weather-type">Type of weather: </p>
+            <p tabindex="5" class="feels-like">Feels like: 24°C</p>
+            <p tabindex="5" class="city">New York</p>
             <div class="info-section-wrap">
-                <div class="humidity-section">
-                    <img src="./images/pictures for weather app/humidity.svg" class="humidity-pic pic-form" />
-                    <div class="hum-cont">
-                        <p class="hum-percentage" style="margin-bottom: 2px;">45%</p>
-                        <p>Humidity</p>
+                <div class="humidity-section" tabindex="6"
+                    aria-label="Section containing the humidity information about the current weather forecast">
+                    <img tabindex="6" src="./images/pictures for weather app/humidity.svg"
+                        class="humidity-pic pic-form" />
+                    <div class="hum-cont" tabindex="6">
+                        <p class="hum-percentage" tabindex="6" style="margin-bottom: 2px;">45%</p>
+                        <p tabindex="6">Humidity</p>
                     </div>
                 </div>
-                <div class="wind-section">
-                    <img src="./images/pictures for weather app/wind.svg" class="wind-pic pic-form" />
-                    <div class="wind-cont">
-                        <p class="wind-speed" style="margin-bottom: 2px;">45 km/h</p>
-                        <p>Wind Speed</p>
+                <div class="wind-section" tabindex="7"
+                    aria-label="Section containing the information about the current wind speed in kilometers per hour">
+                    <img tabindex="7" src="./images/pictures for weather app/wind.svg" class="wind-pic pic-form" />
+                    <div class="wind-cont" tabindex="7">
+                        <p class="wind-speed" tabindex="7" style="margin-bottom: 2px;">45 km/h</p>
+                        <p tabindex="7">Wind Speed</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <article id="cont-info-section">
-            <h1>Charts results of the search</h1>
-    
-            <section id="canvas-wrapper">
+        <article id="cont-info-section" tabindex="8">
+            <h1 tabindex="8">Charts results of the search</h1>
+
+            <section id="canvas-wrapper"
+                aria-label="A section containing the graphs for the temperatures in Fahrenheit and Celsius, the graph for the wind speed and precipitation in mm">
             </section>
-        
-            <section id="data-wrap">
-                <h2>UV indexes and air quality</h2>
+
+            <section id="data-wrap" tabindex="9"
+                aria-label="Section for the main information of the forecast including the moon and sun rise, fall, Illumination, UV index and chances of rain and snowfalls occurring">
+                <h2 tabindex="9">UV indexes and air quality</h2>
                 <section id="astro-information">
                     <h2>Moon and sun information</h2>
                     <div id="below-wrapper">
-        
-                        <div id="moon-and-sun">
-        
-                            <div id="moon">
-                                <h3>Moon</h3>
-                                <ul id="moon-list">
-                                    <li>Illumination: </li>
-                                    <li>Moonset time: </li>
-                                    <li>Moonrise time: </li>
-                                    <li>Moon phase: </li>
+
+                        <div id="moon-and-sun" tabindex="9"
+                            aria-label="section for the moon and sun information including the Illumination, rise, set and phase">
+
+                            <div tabindex="9" id="moon">
+                                <h3 tabindex="9">Moon</h3>
+                                <ul id="moon-list" tabindex="9">
+                                    <li tabindex="9">Illumination: </li>
+                                    <li tabindex="9">Moonset time: </li>
+                                    <li tabindex="9">Moonrise time: </li>
+                                    <li tabindex="9">Moon phase: </li>
                                 </ul>
-                                <div class="pic-container">
-                                    <img src="./images/Moon phases/First-quarter.jpg" id="phase" alt="phase of the moon image">
+                                <div class="pic-container" tabindex="9"
+                                    aria-label="Section where the image is situated showcasing the moon phase">
+                                    <img src="./images/Moon phases/First-quarter.jpg" tabindex="9" id="phase"
+                                        alt="phase of the moon image">
                                 </div>
                             </div>
-        
-                            <div id="sun">
-                                <h3>Sun</h3>
-                                <ul id="sun-list">
-                                    <li>Sunset time: </li>
-                                    <li>Sunrise time: </li>
+
+                            <div id="sun" tabindex="10">
+                                <h3 tabindex="10">Sun</h3>
+                                <ul id="sun-list" tabindex="10">
+                                    <li tabindex="10">Sunset time: </li>
+                                    <li tabindex="10">Sunrise time: </li>
                                 </ul>
                             </div>
-        
+
                         </div>
-        
+
                     </div>
                 </section>
-        
-                <section id="uv-slider">
+
+                <section id="uv-slider" tabindex="11"
+                    aria-label="Section where the UV index information is graphed upon basic UV index diagram in a simple range-based style">
                     <div class="pointer upper"></div>
                     <div style="margin-top: 30px;" class="pointer"></div>
                 </section>
-        
-                <section id="chances">
-                    <h2>Chances of rain or snowing</h2>
-        
-                    <div id="chances-section">
-                        <ul id="chances-list">
-                            <li>Will it rain:</li>
-                            <li>Will it snow:</li>
+
+                <section id="chances" tabindex="12" aria-label="Section for the daily chances of rain and snow">
+                    <h2 tabindex="12">Chances of rain or snowing</h2>
+
+                    <div id="chances-section" tabindex="12">
+                        <ul id="chances-list" tabindex="12">
+                            <li tabindex="12">Will it rain:</li>
+                            <li tabindex="12">Will it snow:</li>
                         </ul>
                     </div>
                 </section>
             </section>
         </article>
     </main>
-    
-    
+
+
     <script type="module" src="weatherScript.js"></script>
 </body>
 
